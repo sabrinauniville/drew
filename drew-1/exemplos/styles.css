@@ -1,0 +1,34 @@
+h1 {
+  color: blue;
+}
+
+a::after {
+  color: red;
+  content: "+";
+  display: block;
+}
+
+p {
+  color: red;
+}
+
+#text-secondary {
+  color: blueviolet;
+}
+
+.input-primary {
+  border: 2px solid pink;
+  background-color: beige;
+  color: pink;
+}
+
+.input-primary[placeholder] {
+  border: 2px solid pink;
+  background-color: beige;
+  color: pink;
+}
+
+.image img,
+.image source {
+  width: 200px;
+}
