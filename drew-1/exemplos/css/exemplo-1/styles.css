@@ -1,0 +1,12 @@
+.pagina-produtos h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.pagina-produtos p::first-letter {
+  text-transform: uppercase;
+}
+
+.pagina-produtos a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categoria TV</title>
+</head>
+
+<body>
+
+  <h1>Categoria de produtos</h1>
+  <h2>TVs</h2>
+
+  <table border="1">
+
+    <!-- Título da tabela -->
+    <caption>Lista de TVs disponíveis</caption>
+
+    <!-- Definição de colunas -->
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+
+    <!-- Cabeçalho da tabela -->
+    <thead>
+      <tr>
+        <th scope="col">Imagem</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Preço à vista</th>
+        <th scope="col">Parcelamento</th>
+        <th scope="col">Detalhes</th>
+      </tr>
+    </thead>
+
+    <!-- Corpo da tabela -->
+    <tbody>
+      <tr>
+        <td>
+          <img src="./tv_samsung.jpg" alt="Imagem de televisão modelo Samsung" width="120">
+        </td>
+        <th scope="row">Samsung</th>
+        <td>R$ 2.000,00</td>
+        <td>10x de R$ 200,00</td>
+        <td>
+          <a target="_blank" href="https://www.samsung.com/br/tvs/">Ver produto</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img src="./tv_lg.jpeg" alt="Imagem de televisão modelo LG" width="120">
+        </td>
+        <th scope="row">LG</th>
+        <td>R$ 5.000,00</td>
+        <td>10x de R$ 500,00</td>
+        <td>
+          <a target="_blank" href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/">Ver produto</a>
+        </td>
+      </tr>
+
+      <!-- Exemplo usando colspan -->
+      <tr>
+        <td colspan="5" align="center">
+          Promoção válida enquanto durarem os estoques
+        </td>
+      </tr>
+
+    </tbody>
+
+    <!-- Rodapé da tabela -->
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          Total de produtos exibidos: 2
+        </td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+</body>
+
+</html>
