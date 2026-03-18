@@ -1,12 +1,30 @@
-.pagina-produtos h1 {
-  font-size: 40px;
+h1 {
+  font-size: 30px;
   text-transform: uppercase;
 }
 
-.pagina-produtos p::first-letter {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+p::first-letter {
   text-transform: uppercase;
 }
 
-.pagina-produtos a:hover {
+a:hover {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+#primary-list {
+  list-style: none;
 }
