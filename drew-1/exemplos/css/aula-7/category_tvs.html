@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendas de TVs</title>
+  <meta name="description" content="Loja online de TVs e acessórios com os melhores preços." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="page-category-tvs">
+  <header>Vendas de TVs e acessórios online</header>
+  <nav>
+    <ul>
+      <li>
+        <a href="./products.html" target="_self">Home</a>
+      </li>
+      <li>
+        <a href="./category_tvs.html" target="_self">TVs</a>
+      </li>
+      <li>
+        <a href="./category_acessories.html">Acessórios</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Categoria de produtos</h1>
+    <h2>TVs</h2>
+
+    <table>
+      <caption>Lista de TVs disponíveis com preços e parcelamento</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Marca</th>
+          <th scope="col">Imagem</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Parcelamento</th>
+          <th scope="col">Detalhes</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Samsung</th>
+          <td>
+            <picture>
+              <!-- WebP (mais leve) -->
+              <source srcset="./images/tv_samsung.webp" type="image/webp" />
+
+              <!-- Responsivo -->
+              <source
+                srcset="./images/tv_samsung-small.jpg 480w, ./images/tv_samsung-medium.jpg 768w, ./images/tv_samsung.jpg 1200w"
+                sizes="(max-width: 600px) 100vw, 300px" type="image/jpeg" />
+
+              <!-- Fallback -->
+              <img src="./images/tv_samsung.jpg" alt="TV Samsung modelo smart" loading="lazy" decoding="async"
+                width="300" height="200" />
+            </picture>
+          </td>
+          <td>R$ 2.000,00</td>
+          <td>R$ 200,00 em 10x</td>
+          <td>
+            <a href="https://www.samsung.com/br/tvs/" target="_blank" rel="noopener noreferrer">
+              Ver mais sobre TVs Samsung
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">LG</th>
+          <td>
+            <img src="./images/tv_lg.jpeg" alt="TV LG" width="100" />
+          </td>
+          <td>R$ 5.000,00</td>
+          <td>R$ 500,00 em 10x</td>
+          <td>
+            <a href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/" target="_blank" rel="noopener noreferrer">
+              Ver mais sobre TVs LG
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form id="tv-request-form">
+      <fieldset>
+        <legend>Solicitação de Modelo de TV</legend>
+
+        <!-- Nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" autocomplete="name" required />
+
+        <!-- Email -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Ex: maria@email.com" autocomplete="email" required />
+
+        <!-- Modelo -->
+        <label for="modelo">Modelo de TV desejado:</label>
+        <input list="modelos-tv" id="modelo" name="modelo" placeholder="Escolha ou digite um modelo" required />
+
+        <datalist id="modelos-tv">
+          <option value="1">Samsung</option>
+          <option value="2">LG</option>
+        </datalist>
+
+        <!-- Botões -->
+        <button type="reset">Limpar formulário</button>
+        <button type="submit">Enviar solicitação</button>
+      </fieldset>
+    </form>
+
+    <details>
+      <summary>Como solicitar um modelo?</summary>
+      <p>
+        Para solicitar um modelo de televisão que não está disponível no site,
+        preencha o formulário acima.
+      </p>
+    </details>
+  </main>
+  <footer>
+    <small>Todos os direitos reservados</small>
+  </footer>
+</body>
+
+</html>
