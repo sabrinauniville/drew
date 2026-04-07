@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>🟢 Aula 2 - Tipos de Dados</h2>
+
+  <p>Em JavaScript, cada valor possui um tipo.</p>
+  <p>Exemplo:</p>
+
+  <pre>
+let idade = 25;
+  </pre>
+
+  <p>Qual o tipo da variável <b>idade</b>?</p>
+
+  <button onclick="responder('number')">Number</button>
+  <button onclick="responder('string')">String</button>
+  <button onclick="responder('boolean')">Boolean</button>
+
+  <p id="feedback1"></p>
+</div>
+
+<div class="card">
+  <h3>🔥 Desafio</h3>
+
+  <p>O que será exibido no console?</p>
+
+  <pre>
+console.log(2 + "2");
+  </pre>
+
+  <input id="resposta2" placeholder="Digite sua resposta">
+  <button onclick="verificar2()">Responder</button>
+
+  <p id="feedback2"></p>
+</div>
+
+<div class="card">
+  <h3>🧠 Explique</h3>
+  <p>Por que isso acontece?</p>
+  <textarea id="explicacao" placeholder="Explique com suas palavras..."></textarea>
+</div>
+
+<script>
+let xpLocal = 0;
+let iniciou = Date.now();
+
+function responder(tipo) {
+  const f = document.getElementById("feedback1");
+
+  if (tipo === "number") {
+    f.innerText = "✅ Correto! +10 XP";
+    xpLocal += 10;
+  } else {
+    f.innerText = "❌ Tente novamente";
+  }
+}
+
+function verificar2() {
+  const tempo = Date.now() - iniciou;
+
+  if (tempo < 8000) {
+    alert("Leia com calma antes de responder 👀");
+    return;
+  }
+
+  const r = document.getElementById("resposta2").value;
+  const f = document.getElementById("feedback2");
+
+  if (r === "22") {
+    f.innerText = "✅ Excelente! +10 XP";
+    xpLocal += 10;
+  } else {
+    f.innerText = "❌ Tente novamente";
+  }
+}
+
+// Anti IA
+
+document.addEventListener("copy", e => e.preventDefault());
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    alert("Volte para a aula 👀");
+  }
+});
+
+</script>
+
+</body>
+</html>
