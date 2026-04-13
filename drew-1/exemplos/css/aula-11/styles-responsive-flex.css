@@ -28,7 +28,6 @@ footer {
   gap: 10px;
   flex-direction: column;
   flex-wrap: nowrap;
-  /* quebra linha automaticamente */
   padding: 20px;
   align-items: center;
   justify-content: center;
@@ -36,15 +35,16 @@ footer {
 
 /* flex-items */
 .product-card {
-  flex: 1 1 30%;
-  /* ocupa ~30% da tela */
+  flex-basis: 30%;
+  flex-grow: 1;
+  flex-shrink: 1;
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
 }
 
 .product-card img {
-  width: 300px;
+  max-width: 150px;
 }
 
 .product-card.align {

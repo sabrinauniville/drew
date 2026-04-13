@@ -5,126 +5,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vendas de TVs</title>
-  <meta name="description" content="Loja online de TVs e acessórios com os melhores preços." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body class="page-category-tvs">
-  <header>
-    <p>Vendas de TVs e acessórios online</p>
-  </header>
+  <h1>Categoria de produtos</h1>
+  <h2>TVs</h2>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="./products.html" target="_self">Home</a>
-      </li>
-      <li>
-        <a href="./category_tvs.html" target="_self">TVs</a>
-      </li>
-      <li>
-        <a href="./category_acessories.html">Acessórios</a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <h1>Categoria de produtos</h1>
-    <h2>TVs</h2>
+  <table>
+    <caption>Lista de TVs disponíveis com preços e parcelamento</caption>
 
-    <table>
-      <caption>Lista de TVs disponíveis com preços e parcelamento</caption>
+    <thead>
+      <tr> <!-- linha -->
+        <th scope="col">Marca</th> <!-- legenda de coluna -->
+        <th scope="col">Imagem</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Parcelamento</th>
+        <th scope="col">Detalhes</th>
+      </tr>
+    </thead>
 
-      <thead>
-        <tr>
-          <th scope="col">Marca</th>
-          <th scope="col">Imagem</th>
-          <th scope="col">Preço</th>
-          <th scope="col">Parcelamento</th>
-          <th scope="col">Detalhes</th>
-        </tr>
-      </thead>
+    <tbody>
+      <tr> <!-- linha -->
+        <th scope="row">Samsung</th> <!-- legenda de linha -->
+        <td> <!-- coluna -->
+          <picture>
+            <!-- até 767px small -->
+            <source srcset="./images/tv_samsung_small.webp" media="(max-width: 767px)" type="image/webp" />
+            <!-- até 1339px medium -->
+            <source srcset="./images/tv_samsung_medium.webp" media="(max-width: 1339px)" type="image/webp" />
+            <!-- acima de 1339px large -->
+            <source srcset="./images/tv_samsung_large.webp" type="image/webp" />
+            <img src="./images/tv_samsung.jpg" alt="TV Samsung modelo smart" />
+          </picture>
+        </td>
+        <td>R$ 2.000,00</td>
+        <td>R$ 200,00 em 10x</td>
+        <td>
+          <a href="https://www.samsung.com/br/tvs/" target="_blank" rel="noopener noreferrer">
+            Ver mais sobre TVs Samsung
+          </a>
+        </td>
+      </tr>
 
-      <tbody>
-        <tr>
-          <th scope="row">Samsung</th>
-          <td>
-            <picture>
-              <!-- WebP (mais leve) -->
-              <source srcset="./images/tv_samsung.webp" type="image/webp" />
+      <tr>
+        <th scope="row">LG</th>
+        <td>
+          <picture>
+            <source srcset="./images/tv_lg_small.webp" media="(max-width: 767px)" type="image/webp" />
+            <source srcset="./images/tv_lg_medium.webp" media="(max-width: 1339px)" type="image/webp" />
+            <source srcset="./images/tv_lg_large.webp" type="image/webp" />
+            <img src="./images/tv_lg.jpg" alt="TV LG modelo smart" />
+          </picture>
+        </td>
+        <td>R$ 5.000,00</td>
+        <td>R$ 500,00 em 10x</td>
+        <td>
+          <a href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/" target="_blank" rel="noopener noreferrer">
+            Ver mais sobre TVs LG
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-              <!-- Responsivo -->
-              <source
-                srcset="./images/tv_samsung-small.jpg 480w, ./images/tv_samsung-medium.jpg 768w, ./images/tv_samsung.jpg 1200w"
-                sizes="(max-width: 600px) 100vw, 300px" type="image/jpeg" />
+  <form id="tv-request-form">
+    <fieldset> <!-- agrupador de campos relacionados, geralmente seguido por uma legenda -->
+      <legend>Solicitação de Modelo de TV</legend>
 
-              <!-- Fallback -->
-              <img src="./images/tv_samsung.jpg" alt="TV Samsung modelo smart" loading="lazy" decoding="async"
-                width="300" height="200" />
-            </picture>
-          </td>
-          <td>R$ 2.000,00</td>
-          <td>R$ 200,00 em 10x</td>
-          <td>
-            <a href="https://www.samsung.com/br/tvs/" target="_blank" rel="noopener noreferrer">
-              Ver mais sobre TVs Samsung
-            </a>
-          </td>
-        </tr>
+      <!-- Nome -->
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" autocomplete="name" required />
 
-        <tr>
-          <th scope="row">LG</th>
-          <td>
-            <img src="./images/tv_lg.jpeg" alt="TV LG" width="100" />
-          </td>
-          <td>R$ 5.000,00</td>
-          <td>R$ 500,00 em 10x</td>
-          <td>
-            <a href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/" target="_blank" rel="noopener noreferrer">
-              Ver mais sobre TVs LG
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <!-- Email -->
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Ex: maria@email.com" autocomplete="email" required />
 
-    <form id="tv-request-form">
-      <fieldset>
-        <legend>Solicitação de Modelo de TV</legend>
+      <!-- Modelo -->
+      <label for="modelo">Modelo de TV desejado:</label>
+      <input list="modelos-tv" id="modelo" name="modelo" placeholder="Escolha ou digite um modelo" required />
 
-        <!-- Nome -->
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" autocomplete="name" required />
+      <datalist id="modelos-tv">
+        <option value="1">Samsung</option>
+        <option value="2">LG</option>
+      </datalist>
 
-        <!-- Email -->
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Ex: maria@email.com" autocomplete="email" required />
+      <!-- Botões -->
+      <button type="reset">Limpar formulário</button>
+      <button type="submit">Enviar solicitação</button>
+    </fieldset>
+  </form>
 
-        <!-- Modelo -->
-        <label for="modelo">Modelo de TV desejado:</label>
-        <input list="modelos-tv" id="modelo" name="modelo" placeholder="Escolha ou digite um modelo" required />
-
-        <datalist id="modelos-tv">
-          <option value="1">Samsung</option>
-          <option value="2">LG</option>
-        </datalist>
-
-        <!-- Botões -->
-        <button type="reset">Limpar formulário</button>
-        <button type="submit">Enviar solicitação</button>
-      </fieldset>
-    </form>
-
-    <details>
-      <summary>Como solicitar um modelo?</summary>
-      <p>
-        Para solicitar um modelo de televisão que não está disponível no site,
-        preencha o formulário acima.
-      </p>
-    </details>
-  </main>
-  <footer>
-    <small>Todos os direitos reservados</small>
-  </footer>
+  <details>
+    <summary>Como solicitar um modelo?</summary>
+    <p>
+      Para solicitar um modelo de televisão que não está disponível no site,
+      preencha o formulário acima.
+    </p>
+  </details>
 </body>
 
 </html>

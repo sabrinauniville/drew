@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vendas de TVs</title>
   <meta name="description" content="Loja online de TVs e acessórios com os melhores preços." />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles-responsive-flex.css" />
 </head>
 
 <body class="page-category-tvs">
@@ -31,61 +31,46 @@
     <h1>Categoria de produtos</h1>
     <h2>TVs</h2>
 
-    <table>
-      <caption>Lista de TVs disponíveis com preços e parcelamento</caption>
+    <section class="products">
+      <!-- Produto 1 -->
+      <article class="product-card">
+        <h3>Samsung</h3>
 
-      <thead>
-        <tr>
-          <th scope="col">Marca</th>
-          <th scope="col">Imagem</th>
-          <th scope="col">Preço</th>
-          <th scope="col">Parcelamento</th>
-          <th scope="col">Detalhes</th>
-        </tr>
-      </thead>
+        <picture>
+          <source srcset="./images/tv_samsung_small.webp" media="(max-width: 767px)" type="image/webp" />
+          <source srcset="./images/tv_samsung_medium.webp" media="(max-width: 1339px)" type="image/webp" />
+          <source srcset="./images/tv_samsung_large.webp" type="image/webp" />
+          <img src="./images/tv_samsung.jpg" alt="TV Samsung modelo smart" />
+        </picture>
 
-      <tbody>
-        <tr>
-          <th scope="row">Samsung</th>
-          <td>
-            <picture>
-              <!-- WebP (mais leve) -->
-              <source srcset="./images/tv_samsung.webp" type="image/webp" />
+        <p><strong>Preço:</strong> R$ 2.000,00</p>
+        <p><strong>Parcelamento:</strong> R$ 200,00 em 10x</p>
 
-              <!-- Responsivo -->
-              <source
-                srcset="./images/tv_samsung-small.jpg 480w, ./images/tv_samsung-medium.jpg 768w, ./images/tv_samsung.jpg 1200w"
-                sizes="(max-width: 600px) 100vw, 300px" type="image/jpeg" />
+        <a href="https://www.samsung.com/br/tvs/" target="_blank" rel="noopener noreferrer">
+          Ver mais sobre TVs Samsung
+        </a>
+      </article>
 
-              <!-- Fallback -->
-              <img src="./images/tv_samsung.jpg" alt="TV Samsung modelo smart" loading="lazy" decoding="async"
-                width="300" height="200" />
-            </picture>
-          </td>
-          <td>R$ 2.000,00</td>
-          <td>R$ 200,00 em 10x</td>
-          <td>
-            <a href="https://www.samsung.com/br/tvs/" target="_blank" rel="noopener noreferrer">
-              Ver mais sobre TVs Samsung
-            </a>
-          </td>
-        </tr>
+      <!-- Produto 2 -->
+      <article class="product-card">
+        <h3>LG</h3>
 
-        <tr>
-          <th scope="row">LG</th>
-          <td>
-            <img src="./images/tv_lg.jpeg" alt="TV LG" width="100" />
-          </td>
-          <td>R$ 5.000,00</td>
-          <td>R$ 500,00 em 10x</td>
-          <td>
-            <a href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/" target="_blank" rel="noopener noreferrer">
-              Ver mais sobre TVs LG
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <picture>
+          <source srcset="./images/tv_lg_small.webp" media="(max-width: 767px)" type="image/webp" />
+          <source srcset="./images/tv_lg_medium.webp" media="(max-width: 1339px)" type="image/webp" />
+          <source srcset="./images/tv_lg_large.webp" type="image/webp" />
+          <img src="./images/tv_lg.jpg" alt="TV LG modelo smart" />
+        </picture>
+
+        <p><strong>Preço:</strong> R$ 5.000,00</p>
+        <p><strong>Parcelamento:</strong> R$ 500,00 em 10x</p>
+
+        <a href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/" target="_blank" rel="noopener noreferrer">
+          Ver mais sobre TVs LG
+        </a>
+      </article>
+    </section>
+
 
     <form id="tv-request-form">
       <fieldset>

@@ -37,7 +37,7 @@ img {
   max-width: 150px;
 }
 
-/* pd 1*/
+/* pd 1 */
 .banner {
   height: 300px;
   width: 300px;
@@ -50,19 +50,20 @@ img {
   display: none;
 }
 
+/* pd 3 */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
 /* all 1 */
-main {
+body {
   padding: 20px;
   margin: 20px;
 }
 
-/* all 3 */
-header {
-  position: sticky;
-  top: 0;
-}
-
-/* all 4 */
+/* all 2 */
 a:hover {
   opacity: 0.5;
 }
