@@ -32,16 +32,29 @@ small {
 }
 
 /* 4 */
-label, button {
+label,
+button {
   text-align: center; /* textos centralizados */
   margin-top: 10px;
 }
 
-label, input, menu {
+label,
+input {
   width: 80%;
+
+}
+
+label,
+input,
+.products-form {
   display: block;
   margin-right: auto; /* elementos centralizados */
   margin-left: auto;
+}
+
+/* ct 5 */
+.products-form {
+  max-width: 330px;
 }
 
 p::first-letter {
