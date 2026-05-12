@@ -15,6 +15,7 @@
   align-items: stretch; /*  aumente os itens para preencher o espaço disponível no eixo da coluna (cima-baixo*/
   align-content: center; /* centraliza o grid no eixo da coluna (cima-baixo) */
   overflow: hidden;
+  grid-template-areas: "product3 . product1" ". product2 .";
 }
 
 /* grid item */
@@ -24,16 +25,16 @@
   text-align: center;
 }
 
-.header {
-  grid-area: header;
+.product-1 {
+  grid-area: product1;
 }
 
-.main {
-  grid-area: main;
+.product-2 {
+  grid-area: product2;
 }
 
-.footer {
-  grid-area: footer;
+.product-3 {
+  grid-area: product3;
 }
 
 .product img {
@@ -55,4 +56,3 @@
     grid-template-columns: 1fr;
   }
 }
-
